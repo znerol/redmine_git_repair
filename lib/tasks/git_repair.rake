@@ -16,7 +16,7 @@ END_DESC
       removed = repo.extra_info["heads"].delete(changeset)
       if removed
         repo.save
-        puts "Removed changeset: " + removed + " from repo id=" + repo.id
+        puts "Removed changeset: #{removed} from repo id=#{repo.id}"
       end
     end
   end
