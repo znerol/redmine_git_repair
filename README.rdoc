@@ -1,0 +1,3 @@
+= Redmine Git Repair Plugin
+
+Provides a rake task to remove spurious heads from git repository records.
