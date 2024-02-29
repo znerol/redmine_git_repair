@@ -13,7 +13,7 @@ END_DESC
     changeset = ENV['changeset']
     condition = "%" + Repository.sanitize_sql_like(changeset) + "%"
     Repository.where("extra_info like ?", condition).find_each do |repo|
-      removed = repo.extra_info.heads.delete(changeset)
+      removed = repo.extra_info["heads"].delete(changeset)
       if removed
         repo.save
         puts "Removed changeset: " + removed + " from repo id=" + repo.id
